@@ -1,9 +1,11 @@
 <script setup>
 import { reactive, onMounted, ref } from "vue";
 import AutoComplete from "@/components/AutoComplete.vue";
+import { useAutorStore } from "@/stores/autor";
 import { useCategoriaStore } from "@/stores/categoria";
 import { useEditoraStore } from "@/stores/editora";
 
+const autorStore = useAutorStore();
 const categoriaStore = useCategoriaStore();
 const editoraStore = useEditoraStore();
 
@@ -52,6 +54,7 @@ async function salvar() {
 }
 
 onMounted(() => {
+  autorStore.getAutores();
   categoriaStore.getCategorias();
   editoraStore.getEditoras();
 });
