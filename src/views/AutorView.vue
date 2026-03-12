@@ -103,11 +103,24 @@ input[type='text'] {
   transition: border-color 0.3s;
 }
 
+input[type='email']:focus {
+  border-color: #343a40;
+  outline: none;
+}
+input[type='email'] {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 250px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s;
+}
+
 input[type='text']:focus {
   border-color: #343a40;
   outline: none;
 }
-
 button {
   padding: 12px 25px;
   font-size: 1rem;
